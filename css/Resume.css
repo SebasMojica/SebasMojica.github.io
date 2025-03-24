@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Header section */
+.header {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #007acc;
+}
+
+.header p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.header a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* Section titles */
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    color: #007acc;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 0.3rem;
+    margin-bottom: 1rem;
+}
+
+/* Education section */
+.education .item {
+    margin-bottom: 1rem;
+}
+
+.education .item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.education .item p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Projects section */
+.projects .item {
+    margin-bottom: 1.5rem;
+}
+
+.projects .item h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.projects .item p {
+    margin: 0.2rem 0;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Skills section */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.skills .skill-group {
+    flex: 1;
+    min-width: 150px;
+}
+
+.skills h3 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.skills ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0;
+}
+
+.skills ul li {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 0.3rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    color: #777;
+}
