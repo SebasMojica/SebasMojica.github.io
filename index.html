@@ -207,49 +207,93 @@
               </div>
               <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
                 <div class="mb-4">
-                  <h3 style="color: black; text-align: center;">Birthday Paradox Simulator</h3>
+                  <h3 style="color: black; text-align: center;">Elevator Simulator</h3>
                   <p>
-                  <h3>What Is The Birthday Paradox?</h3>
-                  The birthday paradox is a probability puzzle stating that in a
-                  group of just 23 people, there's a greater than 50%
-                  chance that two people share the same birthday
+                  <h3>What Is The Elevator Simulator?</h3>
+                  The Elevator Simulator is exactly that; A program that simulates 
+                  Elevators moving up and down buildings, doing their normal operations
                   </p>
                   <p>
-                  <h3>How Does It Work?</h3>
-                  The program works by creating a list of randomly generated birthdays.
-                  It then creates experiments where we test to see if there are any duplicate birthdays
-                  in this list, we test a new batch of birthdays 20 times per experiment. the experiments increase the list
-                  of birthdays by five birthdays everytime we run them.
-                  the experiments start at 5 and end at 100. the program prints out the number of birthdays we are
-                  testing and the percent chance of duplicate birthdays found next to it
+                  <h3>What Does It Do?</h3>
+                  This program will create a specified amount of 4 types of elevators: Standard Elevator, 
+                  which will pick up calls and people if they are on the way to an already assigned call.
+                  Express Elevator, which will only service the top half of the building and the ground floor. Freight Elevator, which 
+                  can service every floor, but will not take a new call unless it is empty
+                  and will not cause it to have more than one person at a time. And Penthouse Elevator, which will only service calls 
+                  going to and from the top floor and the ground floor
+                  </p>
+
+                  <p>
+                  A Scheduler would be selected to assign calls to these Elevators. Theres the Simple and Complex Schedulers. 
+                  The Simple Scheduler would assign calls from left to right depending on if the elevator is available to take the call.
+                  The Complex Scheduler would check to see which Elevator is closest and available, and assign it that call.
+                  </p>
+
+                  <p>
+                    Together, the Elevators and Schedulers make a functioning Simulation
+                  </p>
+
+                  <p>
+                    <h3>How Does It Work?</h3>
+                    The program would accept 7 arguments: Number of floors, Type of Scheduler, Number of Standard Elevators, Number of Freight Elevators, 
+                    Number of Penthouse Elevators, Number of Express Elevators, And the file of calls to read from.
+                  </p>
+                  <p>
+                    Once all the Elevators are created, the Scheduler would go Round by Round until all calls are assigned and completed and all Elevators are grounded
+                  </p>
+                  <p>
+                    A Round is when a scheduler attempts to assign a call to an Elevator, and all Elevators move. Elevators move one floor at a time
+                  </p>
+
+                  <p>
+                    Elevators can accept calls depending on what kind of Elevator they are and what their limits are.
+                  </p>
+                  <p>
+                    Calls have a pickup and a drop off location and are mae by one person at a time in this simulator.
+                    one call corresponds to one person
+                  </p>
+
+                  <p>
+                    The program prints out what round its on, The Elevators, their current floor, direction, and people onboard, the calls assigned to that Elevator,
+                    and the calls yet to be assigned
+                  </p>
+                
+                  <p>
+                    <h3>Design of the project</h3>
+                    We designed the project to be as comliant to the SOLID principles as possible. This helped with readability and the Modular design
+                    made debugging easier
+
+                    <P>
+                      We designed the many Elevators to be Classes that extended an Abstract Elevator Class, which held information such as current floor, number of people,
+                      direction, and assigned call. This abstract method also had every method related to moving and changing the direction of the Elevator as well as keeping track
+                      of people on board. the Only abstract method we had was canServiceCall(), which would be defined differently based on the elevators specifications
+                    </P>
+                    <p>
+                      We designed both Schedulers to Implement a Scheduler Interface, that declared important methods that would be used by both kinds of Scheduler, but be defined differently in each.
+                      The independant Schedulers also implemented helpers that would be useful in assigning calls.
+                    </p>
+                    <p>
+                      We also designed Calls to be its own class, where each call would be its own object that held its information such as pickup floor, drop off floor, and its status. 
+                      This helped immensly in keeping code legible and easy to implement. We originally used a List Array of integers, which proved difficult to keep track of.
+                      This implementation of Call objects proved to be quite effective here.
+                    </p>
                   </p>
                   <p>
                   <h3>Implementation</h3>
-                  I worked on creating the Trial Class, which would create a list of birthdays,
-                  and the Experiment Class, which would test the list for duplicate for birthdays 20 times per list.
-                  As well as the Simulator Class, which was essentially just a driver class.
-                  Implementing these three classes required working together with my partner and his Birthday class,
-                  which would generate a random birthday. Creating the Tests for these files and my partner's Birthday
-                  class was also my responsibility. I tried hard to stick to the SOLID Principles of OOP, and it shows in
-                  The classes and methods I created.
+                  I worked on implementing the logic for each Elevator and making sure they passed all testing. I also design, implemented, and tested 
+                  The Complex Scheduler. Once we designed the Calls class, I was in charge of refactoring all the previous code and handled the debugging
             
                   </p>
                   <p>
                   <h3>What I Learned</h3>
-                  This Project, was the first time where I had to think and program using the SOLID Principles of OOP.
-                  Working on this project solidified my experience creating classes and methods that followed the SOLID
-                  Principles
+                  For this Project, Test-Driven Development took center stage and allowed us to make solid and steady progress.
+                  We got lots of hands-on experience dealing with Abstraction and Inheritence as well as puttin our SOLID principles into practice to make legible code thats
+                  easy to follow, and make changes to.
             
                   </p>
-                  <p>Additionally, this is my first time Implementing Test Classes and is my first look into Test-Driven
-                    Development
-            
-                  </p>
-                  <p>Lastly, This is the first project where I had to work with a partner Using GitHub. Creating seperate
-                    branches
-                    and creating pull-requests was very exciting and very informative. I had to learn how to create good
-                    commit messages
-                    and create informative descriptions for my pull-requests, while also doing code reviews for my partner!
+                  <p>
+                    Additionally, This project gave me extensive practice using a git repository. Specfically with branching, code reviews, and pull-requests
+                    This project also gave me plenty of experience dealing with Merge conflicts and how to resolve them
                   </p>
             
             
