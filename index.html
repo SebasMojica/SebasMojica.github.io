@@ -96,27 +96,34 @@
             <div class="mb-4">
               <p>
               <h2>Who Is Sebastian Mojica?</h2>
-              I am the son of two immigrant parents,
-              A first-generation college student,
-              And the older brother to three younger siblings.
-              </p>
+
               <p>
-              <h2>Professional info </h2>
-              I'm a Motivated Computer Science student with a growing
-              Interest in cybersecurity, and networking.
+                I'm a first-generation college student and the proud son of two immigrant parents. As the eldest of four
+                siblings,
+                I've grown into leadership roles both at home and in my academic life.
               </p>
+
+              <h2>Professional Background</h2>
               <p>
-              <h2>What Are My Hobbies?</h2>
-              My personal motto? if it aint dangerous, it aint fun
+                I'm currently pursuing a degree in Computer Science with a strong interest in cybersecurity and
+                networking. I'm driven
+                by curiosity and motivated by hands-on learning, problem-solving, and collaboration.
               </p>
+
+              <h2>Hobbies & Personal Motto</h2>
               <p>
-                I enjoy such leisurely activities such as: Wrestling, Boxing, Rock Climbing, Camping, Hiking, and just
-                because I can't allow myself to get too comfortable, I enjoy walking at night
+                My motto? “If it's not a little dangerous, it's probably not that fun.” I enjoy physically and mentally
+                challenging
+                activities like wrestling, boxing, rock climbing, hiking, and night walks that push me outside my
+                comfort zone.
               </p>
+
               <p>
-                Although not too crazy, I enjoy pushing my body to its limits, going out of my comfort zone and
-                experiencing what life has to offer
+                I believe growth happens when you're uncomfortable — so I'm always seeking new challenges that test my
+                limits and
+                expand my perspective.
               </p>
+
 
 
             </div>
@@ -147,27 +154,42 @@
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <h3 class="text-center text-dark">Birthday Paradox Simulator</h3>
 
-            <h4>What Is The Birthday Paradox?</h4>
-            <p>The birthday paradox is a probability puzzle stating that in a group of just 23 people, there's a greater
-              than 50% chance that two people share the same birthday.</p>
-
-            <h4>How Does It Work?</h4>
-            <p>The program generates a list of random birthdays and tests for duplicates across multiple experiments.
-              Each
-              experiment increases the number of birthdays by five, running 20 simulations per batch from 5 to 100
-              people.
+            <h4>Overview</h4>
+            <p>
+              This simulator demonstrates the famous probability puzzle known as the Birthday Paradox. Surprisingly, in
+              a group
+              of just 23 people, there's over a 50% chance that two individuals share the same birthday.
             </p>
 
-            <h4>Implementation</h4>
-            <p>I implemented the Trial, Experiment, and Simulator classes, following SOLID OOP principles and writing
-              thorough unit tests for functionality.</p>
+            <h4>Functionality</h4>
+            <p>
+              The program generates lists of random birthdays and runs multiple simulations to check for duplicates.
+              Each batch
+              size increases incrementally from 5 to 100, with 20 experiments per group size. It outputs the percentage
+              of
+              simulations in which duplicate birthdays were found.
+            </p>
 
-            <h4>What I Learned</h4>
-            <p>This was my first experience applying SOLID principles and test-driven development. It also taught me how
-              to
-              use GitHub collaboratively with proper commits, branches, and code reviews.</p>
+            <h4>My Role</h4>
+            <p>
+              I was responsible for developing the <strong>Trial</strong>, <strong>Experiment</strong>, and
+              <strong>Simulator</strong> classes. I also wrote unit tests to validate each component and collaborated
+              with a
+              partner who implemented the birthday generator.
+            </p>
+
+            <h4>Key Takeaways</h4>
+            <ul>
+              <li>Introduced to SOLID principles in object-oriented programming</li>
+              <li>First experience with test-driven development (TDD)</li>
+              <li>Learned collaborative version control with GitHub, including pull requests, branching, and code
+                reviews</li>
+            </ul>
           </div>
         </div>
+
+        <!-- Divider -->
+        <hr class="my-5" style="border-top: 2px solid #ccc;">
 
         <!-- Elevator Simulator Project -->
         <div class="row">
@@ -177,34 +199,53 @@
             <img src="images/ElevatorRound10.png" alt="Elevator Simulation Round 10" class="img-fluid">
           </div>
           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-center text-dark">Elevator Simulator</h3>
+            <h3 class="text-center text-dark">Elevator Simulation Project</h3>
 
-            <h4>What Is It?</h4>
-            <p>A simulation of elevator behavior using different types (Standard, Freight, Express, Penthouse) and
-              schedulers (Simple, Complex) that respond to building calls.</p>
+            <h4>Overview</h4>
+            <p>
+              This project simulates elevator systems in a multi-floor building using four types of elevators and two
+              different
+              scheduler algorithms. It showcases object-oriented design, abstraction, and real-world logic handling.
+            </p>
 
-            <h4>How It Works</h4>
-            <p>The program takes arguments such as the number of floors, elevator types, and a call file. Elevators
-              respond
-              to calls based on their specific rules, moving one floor per round.</p>
+            <h4>Features</h4>
+            <ul>
+              <li><strong>Elevator Types:</strong> Standard, Express, Freight, and Penthouse — each with specific
+                constraints
+                and behaviors.</li>
+              <li><strong>Schedulers:</strong> Simple (first available) and Complex (most efficient based on location
+                and
+                availability).</li>
+              <li>Elevators respond to pickup/drop-off calls and execute movement round-by-round until all requests are
+                fulfilled.</li>
+            </ul>
 
-            <h4>Design</h4>
-            <p>Elevators inherit from an abstract class defining shared logic. Schedulers implement a common interface
-              but
-              apply different strategies. Calls are modeled as objects, improving readability and debugging.</p>
+            <h4>Design Approach</h4>
+            <p>
+              Elevators extend from an abstract base class that defines shared properties and behaviors. Each scheduler
+              implements a shared interface but executes call assignment differently. Calls are encapsulated in their
+              own class,
+              making the logic modular and maintainable.
+            </p>
 
-            <h4>Implementation</h4>
-            <p>I built and tested elevator logic, implemented the Complex Scheduler, and helped refactor the Call class
-              system. I also resolved merge conflicts and improved code quality.</p>
+            <h4>My Role</h4>
+            <p>
+              I implemented all elevator logic, developed and tested the Complex Scheduler, and led the refactoring
+              effort for
+              the Call class structure. I also helped resolve merge conflicts and conducted code reviews during
+              collaboration.
+            </p>
 
-            <h4>What I Learned</h4>
-            <p>This project emphasized test-driven development, abstraction, inheritance, and collaborative Git
-              workflows
-              including conflict resolution and proper use of pull requests.</p>
+            <h4>Key Takeaways</h4>
+            <ul>
+              <li>Applied SOLID principles and abstraction effectively</li>
+              <li>Practiced test-driven development at scale</li>
+              <li>Improved proficiency in Git workflows and team collaboration</li>
+            </ul>
           </div>
         </div>
 
-      </div>
+
     </section>
 
 
