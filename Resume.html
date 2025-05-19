@@ -2,10 +2,18 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
-    <link rel="stylesheet" href="css/Resume.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume - Sebastian Mojica</title>
+    <link rel="stylesheet" href="css/Resume.css" />
+
+
+
+    <script>
+        function printResume() {
+            window.print();
+        }
+    </script>
 </head>
 
 <body>
@@ -14,7 +22,11 @@
             <h1>Sebastian Mojica</h1>
             <p>Lemon Grove, California</p>
             <p>619-642-4970 | <a href="mailto:smojica@sandiego.edu">smojica@sandiego.edu</a></p>
-            <p><a href="https://linkedin.com/in/sebastian-mojica-73352a253" target="_blank">LinkedIn Profile</a></p>
+            <p>
+                <a href="https://linkedin.com/in/sebastian-mojica-73352a253" target="_blank">LinkedIn</a> |
+                <a href="https://github.com/Sebastian-Mojica" target="_blank">GitHub</a>
+            </p>
+            <button class="btn download-btn" onclick="printResume()">Download as PDF</button>
         </div>
 
         <section class="education">
@@ -33,19 +45,86 @@
 
         <section class="projects">
             <h2>Projects</h2>
+
+            <div class="item">
+                <h3>Card Game Simulator</h3>
+                <p>Comp 305 – Object-Oriented Programming</p>
+                <p>Built a modular card game engine using Java and design patterns. Supported game logic injection via
+                    Strategy Pattern with multiple game modes (Go Fish, Rummy).</p>
+                <p>
+                    <a href="https://github.com/usd-comp-305/project-04-taylor-iby-sebastian" target="_blank">View on
+                        GitHub</a>
+                </p>
+                <div>
+                    <span class="badge">Java</span>
+                    <span class="badge">JUnit</span>
+                    <span class="badge">Mockito</span>
+                    <span class="badge">Design Patterns</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3>Elevator Simulator</h3>
+                <p>Comp 305 – Object-Oriented Programming</p>
+                <p>Simulated elevator behaviors with multiple elevator types and scheduling strategies. Focused on
+                    abstraction, inheritance, and SOLID principles.</p>
+                <p>
+                    <a href="https://github.com/usd-comp-305/project-03-taylor-erickson-sebastian-mojica"
+                        target="_blank">View on GitHub</a>
+                </p>
+                <div>
+                    <span class="badge">Java</span>
+                    <span class="badge">OOP</span>
+                    <span class="badge">SOLID</span>
+                </div>
+            </div>
+
+            <div class="item">
+                <h3>Birthday Paradox Simulator</h3>
+                <p>Comp 305 – Object-Oriented Programming</p>
+                <p>Developed a simulator to demonstrate birthday probability distributions with randomized input and
+                    iterative test cycles.</p>
+                <p>
+                    <a href="https://github.com/usd-comp-305/project-02-sebastian-mojica" target="_blank">View on
+                        GitHub</a>
+                </p>
+                <div>
+                    <span class="badge">Java</span>
+                    <span class="badge">TDD</span>
+                    <span class="badge">Data Simulation</span>
+                </div>
+            </div>
+
             <div class="item">
                 <h3>Encryption Machine</h3>
-                <p>Comp 230 - Advanced Computational Problem Modeling</p>
+                <p>Comp 230 – Advanced Computational Problem Modeling</p>
                 <p>Created a program to encrypt and decrypt messages using a user-provided key.</p>
+                <div>
+                    <span class="badge">Python</span>
+                    <span class="badge">Algorithms</span>
+                </div>
             </div>
+
             <div class="item">
                 <h3>Weather Station Connection</h3>
-                <p>Comp 375 - Networking</p>
-                <p>Built a program to retrieve weather data (temperature, wind speed, humidity) from a server.</p>
+                <p>Comp 375 – Networking</p>
+                <p>Built a program to retrieve and display real-time weather data from a server using socket
+                    communication.</p>
+                <div>
+                    <span class="badge">Networking</span>
+                    <span class="badge">Sockets</span>
+                </div>
             </div>
+
             <div class="item">
-                <h3>Home Network</h3>
-                <p>Developed a custom firewall and VLAN for enhanced security using virtual machines.</p>
+                <h3>Home Network Security</h3>
+                <p>Designed and configured a virtualized home network with VLANs and a pfSense firewall. Focused on
+                    subnetting and traffic isolation.</p>
+                <div>
+                    <span class="badge">Linux</span>
+                    <span class="badge">Networking</span>
+                    <span class="badge">Firewall</span>
+                </div>
             </div>
         </section>
 
@@ -61,12 +140,15 @@
                 </ul>
             </div>
             <div class="skill-group">
-                <h3>Professional Skills</h3>
+                <h3>Professional Tools & Knowledge</h3>
                 <ul>
-                    <li>SolidWorks</li>
-                    <li>Cybersecurity</li>
-                    <li>Linux</li>
-                    <li>Networking</li>
+                    <li>Git & GitHub</li>
+                    <li>JUnit / Mockito</li>
+                    <li>Linux (Ubuntu / Kali)</li>
+                    <li>Networking & Firewalls</li>
+                    <li>Cybersecurity Fundamentals</li>
+                    <li>Object-Oriented Design</li>
+                    <li>Test-Driven Development</li>
                 </ul>
             </div>
         </section>
