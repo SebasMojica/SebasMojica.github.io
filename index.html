@@ -260,44 +260,88 @@
 
             <h4>Overview</h4>
             <p>
-              This project simulates elevator systems in a multi-floor building using four types of elevators and two
-              different
-              scheduler algorithms. It showcases object-oriented design, abstraction, and real-world logic handling.
+              In this project, me and 3 other students aimed to create a card game simulator that can be used to play
+              any kind of card game
+              by simply extending and creating behaviors for the desired game they would like to create.
+
+            </p>
+            <p>
+              We already have two games that one can play, a simple Go-Fish card game, and a Rummy card game. But with
+              this program, any card game
+              can be created using the Object-oriented design philosophy of our project
             </p>
 
-            <h4>Features</h4>
-            <ul>
-              <li><strong>Elevator Types:</strong> Standard, Express, Freight, and Penthouse — each with specific
-                constraints
-                and behaviors.</li>
-              <li><strong>Schedulers:</strong> Simple (first available) and Complex (most efficient based on location
-                and
-                availability).</li>
-              <li>Elevators respond to pickup/drop-off calls and execute movement round-by-round until all requests are
-                fulfilled.</li>
-            </ul>
+            <h4>Functional Requirements</h4>
+            <p>
+              Our project is broken up in a way that allows the developer to implement any kind of card game they'd
+              Like!
+            </p>
+            <p>
+              We accomplished this by having each card game be made up of game behaviors, (like the rules and whatnot),
+              and player behaviors.
+            </p>
+            <p>
+              At the core of our project is the CardGame class, which serves as the main game controller card game
+              behavior injected into it
+              It manages the Deck of cards, Players and their behaviors, as delegates the logic according to the game
+              behaviors
+            </p>
+            <p>
+              This design allows developers to simpley create their own game and player behavior for any kind of card
+              game theyd like!
+            </p>
+
 
             <h4>Design Approach</h4>
             <p>
-              Elevators extend from an abstract base class that defines shared properties and behaviors. Each scheduler
-              implements a shared interface but executes call assignment differently. Calls are encapsulated in their
-              own class,
-              making the logic modular and maintainable.
+              We decided on a card game simulator in order to demonstrate the core concepts of Object-Oriented
+              Programming.
+            </p>
+            <p>
+              We developed our code according to Test driven development using Mockito as well as JUnit, and applied our
+              SOLID principles
+            </p>
+            <p>
+              But the way we designed our project was very cool. We wanted to make this project as open ended as
+              possible, so that later down
+              the line, anyone could improve on it and make new card games we haven't implemented yet
+            </p>
+            <p>
+              In order to do this, we implemented several design patterns into our program. We used the Factory Pattern
+              to create
+              a deck of cards. and the simulator uses a Strategy Pattern to plug in different game logic.
+            </p>
+            <p>
+              Each game defines its own `GameBehavior` and
+              `PlayerBehavior` strategies. We use Dependecny Injection to apply the logic into CardGame
+            </p>
+            <p>
+              The engine `CardGame` remains unaware of which game is being played - making it
+              completely modular and extendable!</p>
             </p>
 
             <h4>My Role</h4>
             <p>
-              I implemented all elevator logic, developed and tested the Complex Scheduler, and led the refactoring
-              effort for
-              the Call class structure. I also helped resolve merge conflicts and conducted code reviews during
-              collaboration.
+              I was responsible for creating the class stubs and starting the TDD for each part of the project. I mostly
+              focused
+              on implementing the logic for the Deck Of Cards, and the logic behind the participants in the game. I had
+              to make sure that
+              each participant could reliably take in the behaviors of whatever a developer might want in it using
+              Dependency Injection.
+              I was also in charge for a lot of the testing and debugging. This was my first time using Mockito, and
+              working with design patterns
+              So this was a fun project to work on!
             </p>
 
             <h4>Key Takeaways</h4>
             <ul>
               <li>Applied SOLID principles and abstraction effectively</li>
-              <li>Practiced test-driven development at scale</li>
+              <li>Practiced test-driven development at scale using Mockito</li>
               <li>Improved proficiency in Git workflows and team collaboration</li>
+              <li>Applied Design Patterns such as Factory pattern and Strategy Pattern</li>
+              <li>Used Dependency Inection for game and playe behaviors</li>
+              <li>Creating and planning out a design using UML and PlantUML</li>
+              <li>Using proper documentation such as a README and Javadocs</li>
             </ul>
           </div>
         </div>
