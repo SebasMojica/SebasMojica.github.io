@@ -1,0 +1,24 @@
+.text-type {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  color: var(--text-primary, #e3e9f9);
+  letter-spacing: 0.06em;
+}
+
+.text-type__content {
+  display: inline-block;
+  min-width: 1ch;
+  transition: color 0.3s ease;
+}
+
+.text-type__cursor {
+  display: inline-block;
+  margin-left: 0.2em;
+  color: var(--accent, #5a8dff);
+}
+
+.text-type__cursor--hidden {
+  visibility: hidden;
+}
