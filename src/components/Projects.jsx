@@ -1,5 +1,5 @@
 import React from 'react';
-//import DecryptedText from './DecryptedText';
+import DecryptedText from './DecryptedText.jsx';
 
 const Projects = () => {
   return (
@@ -18,8 +18,7 @@ const Projects = () => {
             <img src="images/BirthdayParadoxOutput.png" alt="Birthday Paradox Output" className="img-fluid" />
           </div>
           <div className="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-            <h3 className="text-center text-dark">Birthday Paradox Simulator</h3>
-
+            <DecryptedText text="Birthday Paradox Simulator" animateOn="view" />
             <h4>Overview</h4>
             <p>
               This simulator demonstrates the famous probability puzzle known as the Birthday Paradox. Surprisingly, in
@@ -60,7 +59,7 @@ const Projects = () => {
             <img src="images/ElevatorRound10.png" alt="Elevator Simulation Round 10" className="img-fluid" />
           </div>
           <div className="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-            <h3 className="text-center text-dark">Elevator Simulation Project</h3>
+            <DecryptedText text="Elevator Simulator" animateOn="view" speed={75} />
 
             <h4>Overview</h4>
             <p>
@@ -121,7 +120,7 @@ const Projects = () => {
             <img src="images/CardGame_UML.png" alt="UML overview of Card Game Simulator" className="img-fluid mb-3" />
           </div>
           <div className="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
-            <h3 className="text-center text-dark">Card Game Simulator Project</h3>
+            <DecryptedText text="Card Game Simulator" animateOn="view" speed={75} />
 
             <h4>Overview</h4>
             <p>

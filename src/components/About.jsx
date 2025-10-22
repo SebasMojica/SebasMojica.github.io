@@ -11,7 +11,7 @@ const About = () => {
           </div>
           <div className="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
             <div className="mb-4">
-              <AsciiText text="Queso?" className="mb-3 text-uppercase" />
+              <AsciiText text="WOW!" className="mb-3 text-uppercase" />
               <h2 className="sr-only">Who Is Sebastian Mojica?</h2>
               <p>
                 I'm a first-generation college student and the proud son of two immigrant parents. As the eldest of four

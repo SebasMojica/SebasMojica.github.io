@@ -41,6 +41,8 @@ const TextType = ({
     return Math.random() * (max - min) + min;
   }, [variableSpeed, typingSpeed]);
 
+  const clampDelay = value => Math.max(value, 20);
+
   const getCurrentTextColor = () => {
     if (textColors.length === 0) return '#ffffff';
     return textColors[currentTextIndex % textColors.length];
@@ -102,7 +104,7 @@ const TextType = ({
         } else {
           timeout = setTimeout(() => {
             setDisplayedText(prev => prev.slice(0, -1));
-          }, deletingSpeed);
+          }, clampDelay(deletingSpeed));
         }
       } else {
         if (currentCharIndex < processedText.length) {
@@ -111,12 +113,12 @@ const TextType = ({
               setDisplayedText(prev => prev + processedText[currentCharIndex]);
               setCurrentCharIndex(prev => prev + 1);
             },
-            variableSpeed ? getRandomSpeed() : typingSpeed
+            clampDelay(variableSpeed ? getRandomSpeed() : typingSpeed)
           );
         } else if (textArray.length > 1) {
           timeout = setTimeout(() => {
             setIsDeleting(true);
-          }, pauseDuration);
+          }, clampDelay(pauseDuration));
         }
       }
     };

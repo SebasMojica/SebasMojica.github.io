@@ -18,7 +18,8 @@ const Header = () => {
           <div className="row align-items-center">
             <div className="col-6 col-xl-2">
               <TextType 
-                  text={["Sebastian Mojica"]}
+
+                  text={["Mojica"]}
                   typingSpeed={75}
                   showCursor={true}
                   cursorCharacter="|"
