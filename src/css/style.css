@@ -1,10 +1,10 @@
 /* Base */
 :root {
   --bg-page: #0b1224;
-  --bg-section: #141d35;
-  --bg-section-alt: #1a2540;
-  --bg-navbar: rgba(13, 19, 34, 0.9);
-  --bg-card: #1f2a48;
+  --bg-section: rgba(20, 29, 53, 0.18);
+  --bg-section-alt: rgba(26, 37, 64, 0.2);
+  --bg-navbar: rgba(13, 19, 34, 0.32);
+  --bg-card: rgba(31, 42, 72, 0.38);
   --text-primary: #e3e9f9;
   --text-secondary: #b6c2df;
   --text-muted: #8d9ab8;
@@ -29,6 +29,11 @@ body {
 .App {
   min-height: 100vh;
   background: transparent;
+}
+
+.site-wrap {
+  position: relative;
+  z-index: 0;
 }
 
 ::-moz-selection {
@@ -219,12 +224,31 @@ body:after {
 
 .site-section {
   padding: 2.5em 0;
-  background: linear-gradient(180deg, var(--bg-section) 0%, var(--bg-section-alt) 100%);
+  position: relative;
   color: var(--text-secondary);
   border-top: 1px solid var(--border-soft);
   border-bottom: 1px solid var(--border-soft);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: transparent;
 }
 
+.site-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(160deg, var(--bg-section) 0%, transparent 75%),
+    linear-gradient(340deg, var(--bg-section-alt) -10%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.site-section > .container,
+.site-section > .container-fluid {
+  position: relative;
+  z-index: 1;
+}
 @media (min-width: 768px) {
   .site-section {
     padding: 5em 0;
@@ -235,8 +259,10 @@ body:after {
   padding: 4em 0;
 }
 
-.site-section:nth-of-type(odd) {
-  background: linear-gradient(180deg, var(--bg-section-alt) 0%, var(--bg-section) 100%);
+.site-section:nth-of-type(odd)::before {
+  background:
+    linear-gradient(160deg, var(--bg-section-alt) 0%, transparent 75%),
+    linear-gradient(340deg, var(--bg-section) -10%, transparent 70%);
 }
 
 .site-section-heading {
@@ -254,10 +280,30 @@ body:after {
 
 .site-footer {
   padding: 4em 0;
-  background: var(--bg-section-alt);
+  position: relative;
   color: var(--text-secondary);
   border-top: 1px solid var(--border-soft);
   box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  background: transparent;
+}
+
+.site-footer::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(170deg, var(--bg-section-alt) 0%, transparent 70%),
+    linear-gradient(350deg, var(--bg-section) -20%, transparent 65%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.site-footer .container,
+.site-footer .container-fluid {
+  position: relative;
+  z-index: 1;
 }
 
 @media (min-width: 768px) {
@@ -367,7 +413,7 @@ body:after {
   bottom: 0;
   z-index: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.35);
 }
 
 .bg-image>.container {
@@ -947,7 +993,7 @@ body:after {
   bottom: 0;
   right: 0;
   top: 0;
-  background: rgba(9, 14, 26, 0.7);
+  background: rgba(9, 14, 26, 0.35);
 }
 
 .site-blocks-cover .player {

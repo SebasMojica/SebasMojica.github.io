@@ -211,7 +211,6 @@ function App() {
     <div className="App">
       <div id="overlayer"></div>
       <Loader />
-      
       <div className="site-wrap">
         <Header />
         <About />
