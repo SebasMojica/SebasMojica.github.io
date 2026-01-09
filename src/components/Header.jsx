@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import TextType from './TextType';
 
 const Header = () => {
@@ -17,21 +18,22 @@ const Header = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-6 col-xl-2">
+              <Link to="/" className="logo-link">
               <TextType 
-
                   text={["Mojica"]}
                   typingSpeed={75}
                   showCursor={true}
                   cursorCharacter="|"
               />
+              </Link>
             </div>
 
             <div className="col-12 col-md-10 d-none d-xl-block">
               <nav className="site-navigation position-relative text-right" role="navigation">
                 <ul className="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                  <li><a href="#about-section" className="nav-link">About</a></li>
-                  <li><a href="#projects-section" className="nav-link">Projects</a></li>
-                  <li><a href="#contact-section" className="nav-link">Contact</a></li>
+                  <li><Link to="/about" className="nav-link">About</Link></li>
+                  <li><Link to="/projects" className="nav-link">Projects</Link></li>
+                  <li><Link to="/contact" className="nav-link">Contact</Link></li>
                 </ul>
               </nav>
             </div>

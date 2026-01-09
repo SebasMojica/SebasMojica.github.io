@@ -1,10 +1,15 @@
 import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
-import About from './components/About.jsx';
-import Projects from './components/Projects.jsx';
-import Contact from './components/Contact.jsx';
 import Footer from './components/Footer.jsx';
 import Loader from './components/Loader.jsx';
+import LandingPage from './components/LandingPage.jsx';
+import AboutPage from './components/AboutPage.jsx';
+import ProjectsOverviewPage from './components/ProjectsOverviewPage.jsx';
+import SoftwareEngineeringProjectsPage from './components/SoftwareEngineeringProjectsPage.jsx';
+import CybersecurityProjectsPage from './components/CybersecurityProjectsPage.jsx';
+import AIProjectsPage from './components/AIProjectsPage.jsx';
+import ContactPage from './components/ContactPage.jsx';
 
 function App() {
   useEffect(() => {
@@ -112,20 +117,6 @@ function App() {
         };
         siteSticky();
 
-        // One page navigation
-        const OnePageNavigation = () => {
-          window.$("body").on("click", ".main-menu li a[href^='#'], .smoothscroll[href^='#'], .site-mobile-menu .site-nav-wrap li a", function(e) {
-            e.preventDefault();
-            const hash = this.hash;
-            window.$('html, body').animate({
-              'scrollTop': window.$(hash).offset().top
-            }, 600, 'easeInOutExpo', function(){
-              window.location.hash = hash;
-            });
-          });
-        };
-        OnePageNavigation();
-
         // Scroll functionality
         const siteScroll = () => {
           window.$(window).scroll(function() {
@@ -208,17 +199,25 @@ function App() {
   }, []);
 
   return (
+    <Router>
     <div className="App">
       <div id="overlayer"></div>
       <Loader />
       <div className="site-wrap">
         <Header />
-        <About />
-        <Projects />
-        <Contact />
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/projects" element={<ProjectsOverviewPage />} />
+            <Route path="/projects/software-engineering" element={<SoftwareEngineeringProjectsPage />} />
+            <Route path="/projects/cybersecurity" element={<CybersecurityProjectsPage />} />
+            <Route path="/projects/ai" element={<AIProjectsPage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
         <Footer />
       </div>
     </div>
+    </Router>
   );
 }
 

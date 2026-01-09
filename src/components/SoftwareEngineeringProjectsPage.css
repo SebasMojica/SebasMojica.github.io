@@ -1,0 +1,292 @@
+/* Software Engineering Projects Page Styles */
+
+.software-engineering-projects-page {
+  font-family: 'Open Sans', sans-serif;
+  background: radial-gradient(circle at top, #141f3a 0%, #0b1224 50%, #060915 100%);
+  color: var(--text-secondary);
+}
+
+/* Header Section */
+.projects-header {
+  padding: 120px 0 80px;
+  background: var(--bg-section);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.page-subtitle {
+  font-size: 1.3rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+}
+
+.projects-header-content {
+  position: relative;
+}
+
+.ascii-projects-title {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 80px;
+  z-index: 1;
+  opacity: 0.6;
+}
+
+/* Project Sections */
+.project-section {
+  padding: 80px 0;
+  background: var(--bg-section-alt);
+}
+
+.project-section .container-fluid {
+  padding: 0 40px;
+}
+
+.project-section.alt {
+  background: var(--bg-section);
+}
+
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text-primary);
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+}
+
+.project-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.project-content ul {
+  color: #6c757d;
+  margin-bottom: 1.5rem;
+}
+
+.project-content li {
+  margin-bottom: 0.5rem;
+}
+
+.project-images img {
+  border-radius: 15px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.02);
+}
+
+.project-tech {
+  margin: 2rem 0;
+}
+
+.tech-tag {
+  display: inline-block;
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Presentation Section */
+.presentation-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.presentation-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.presentation-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA Section */
+.projects-cta {
+  padding: 80px 0;
+  background: var(--bg-section);
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.projects-cta h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.projects-cta p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  padding: 12px 30px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border-color: var(--accent);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(90, 141, 255, 0.3);
+  color: white;
+  background: var(--accent-strong);
+}
+
+.btn-outline-primary {
+  background: transparent;
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.btn-outline-primary:hover {
+  background: var(--accent);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.btn-lg {
+  padding: 15px 40px;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .project-section .container-fluid {
+    padding: 0 20px;
+  }
+  
+  .page-title {
+    font-size: 2.5rem;
+  }
+  
+  .page-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .project-title {
+    font-size: 2rem;
+  }
+  
+  .project-content h3 {
+    font-size: 1.3rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .projects-cta h2 {
+    font-size: 2rem;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-buttons .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 576px) {
+  .project-section .container-fluid {
+    padding: 0 15px;
+  }
+  
+  .projects-header {
+    padding: 80px 0 60px;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .project-section,
+  .presentation-section,
+  .projects-cta {
+    padding: 60px 0;
+  }
+  
+  .project-title {
+    font-size: 1.8rem;
+  }
+  
+  .project-content h3 {
+    font-size: 1.2rem;
+  }
+  
+  .project-content p {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
+
