@@ -82,10 +82,7 @@ const CybersecurityProjectsPage = () => {
                 Let's discuss how we can work together!
               </p>
               <div className="cta-buttons">
-                <Link to="/contact" className="btn btn-primary btn-lg">
-                  Get In Touch
-                </Link>
-                <Link to="/projects" className="btn btn-outline-primary btn-lg">
+                <Link to="/projects" className="btn btn-primary btn-lg">
                   View All Projects
                 </Link>
               </div>

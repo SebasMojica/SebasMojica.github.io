@@ -22,7 +22,7 @@ const AboutPage = () => {
                     enableWaves={true}
                   />
               <div className="about-header-content">
-                <h1 className="page-title">  observe         </h1>
+                <h1 className="page-title">About Sebastian</h1>
                 <p className="page-subtitle">
                   <DecryptedText 
                     text="Get to know the person behind the code"
@@ -56,30 +56,28 @@ const AboutPage = () => {
                 <div className="about-text">
                   <h2>Who Is Sebastian Mojica?</h2>
                   <p>
-                    I'm a first-generation college student and the proud son of two immigrant parents. 
-                    As the eldest of four siblings, I've grown into leadership roles both at home and 
-                    in my academic life.
+                    I'm a Computer Science student at the University of San Diego, focused on building
+                    secure systems and practical AI workflows for cybersecurity applications.
+                  </p>
+
+                  <h3>Education Path</h3>
+                  <p>
+                    B.A. in Computer Science expected in May 2026, followed by a planned M.S. in
+                    Cyber Security expected in Fall 2026. I pair theory with implementation by
+                    building production-style systems and validating them in my home lab.
                   </p>
 
                   <h3>Cybersecurity Focus</h3>
                   <p>
-                    I'm currently pursuing a degree in Computer Science with a specialized focus on 
-                    cybersecurity and network security. My hands-on experience includes penetration testing 
-                    with Burp Suite and Wireshark, setting up secure homelab environments with pfSense 
-                    firewalls and Suricata IDS/IPS, and writing technical white papers on security 
-                    recommendations for medium-sized businesses.
+                    My work centers on penetration testing methodology, network segmentation,
+                    IDS/IPS deployment, and AI-supported threat analysis. I regularly use tools such
+                    as Kali Linux, Burp Suite, Wireshark, Nmap/Zenmap, Hashcat, Snort, and Suricata.
                   </p>
 
-                  <h3>Hobbies & Personal Motto</h3>
+                  <h3>Engineering Interests</h3>
                   <p>
-                    My motto? "If it's not a little dangerous, it's probably not that fun." I enjoy 
-                    physically and mentally challenging activities like wrestling, boxing, rock climbing, 
-                    hiking, and night walks that push me outside my comfort zone.
-                  </p>
-
-                  <p>
-                    I believe growth happens when you're uncomfortable — so I'm always seeking new 
-                    challenges that test my limits and expand my perspective.
+                    I enjoy designing systems that are both defensible and observable: API validation,
+                    attack-chain graphing, and retrieval pipelines for faster triage and reporting.
                   </p>
                 </div>
               </div>
@@ -112,6 +110,8 @@ const AboutPage = () => {
                         <span className="skill-tag">Kali Linux</span>
                         <span className="skill-tag">Suricata</span>
                         <span className="skill-tag">pfSense</span>
+                        <span className="skill-tag">Nmap/Zenmap</span>
+                        <span className="skill-tag">Hashcat</span>
                       </div>
                     </div>
                   </div>
@@ -123,19 +123,21 @@ const AboutPage = () => {
                         <span className="skill-tag">Subnetting</span>
                         <span className="skill-tag">Firewalls</span>
                         <span className="skill-tag">IDS/IPS</span>
-                        <span className="skill-tag">Homelab</span>
+                        <span className="skill-tag">VPN</span>
+                        <span className="skill-tag">Active Directory</span>
                       </div>
                     </div>
                   </div>
                   <div className="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
                     <div className="skill-category">
-                      <h3>Programming & Analysis</h3>
+                      <h3>AI, Dev & Data</h3>
                       <div className="skill-tags">
                         <span className="skill-tag">Python</span>
-                        <span className="skill-tag">JavaScript</span>
-                        <span className="skill-tag">Linux</span>
-                        <span className="skill-tag">Technical Writing</span>
-                        <span className="skill-tag">Git</span>
+                        <span className="skill-tag">FastAPI</span>
+                        <span className="skill-tag">Neo4j</span>
+                        <span className="skill-tag">ChromaDB</span>
+                        <span className="skill-tag">Next.js</span>
+                        <span className="skill-tag">Git/GitHub</span>
                       </div>
                     </div>
                   </div>
@@ -146,12 +148,52 @@ const AboutPage = () => {
         </div>
       </section>
 
-      {/* Values Section */}
+      <section className="resume-section">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-lg-12 text-center" data-aos="fade-up">
+              <h2 className="section-title">Certifications & Frameworks</h2>
+              <p className="section-subtitle">In progress and actively applied in projects</p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-xl-10 col-lg-11 mx-auto">
+              <div className="resume-content-box">
+                <div className="row align-items-center">
+                  <div className="col-lg-8">
+                    <div className="resume-info">
+                      <h3>Current Certification Track</h3>
+                      <p className="resume-subtitle">CompTIA Security+ | CompTIA AI Security+ | CEH</p>
+                      <p className="resume-description">
+                        I am actively preparing for industry certifications while applying core frameworks
+                        like MITRE ATT&CK and OWASP Top 10 in real project pipelines and lab assessments.
+                      </p>
+                      <div className="resume-features">
+                        <div className="feature-item"><i className="icon-check"></i><span>MITRE ATT&CK mapping workflows</span></div>
+                        <div className="feature-item"><i className="icon-check"></i><span>OWASP-driven web app testing</span></div>
+                        <div className="feature-item"><i className="icon-check"></i><span>Pen testing methodology and reporting</span></div>
+                        <div className="feature-item"><i className="icon-check"></i><span>Cryptography and PKI implementation labs</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-4 text-center">
+                    <div className="resume-download">
+                      <div className="resume-icon"><i className="icon-shield"></i></div>
+                      <p className="resume-note">Contact me for the latest one-page resume and full project brief.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="values-section">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-12 text-center" data-aos="fade-up">
-              <h2 className="section-title">My Values</h2>
+              <h2 className="section-title">How I Work</h2>
             </div>
           </div>
           <div className="row">
@@ -163,10 +205,10 @@ const AboutPage = () => {
                       <div className="value-icon">
                         <i className="icon-lightbulb"></i>
                       </div>
-                      <h3>Continuous Learning</h3>
+                      <h3>Research to Implementation</h3>
                       <p>
-                        I'm always eager to learn new technologies and improve my skills. 
-                        Technology evolves rapidly, and I make it a priority to stay current.
+                        I turn classroom and research concepts into deployable tools, then refine
+                        based on measured outcomes from tests and lab scenarios.
                       </p>
                     </div>
                   </div>
@@ -175,10 +217,10 @@ const AboutPage = () => {
                       <div className="value-icon">
                         <i className="icon-users"></i>
                       </div>
-                      <h3>Collaboration</h3>
+                      <h3>Security by Design</h3>
                       <p>
-                        I believe the best solutions come from working together. I enjoy 
-                        collaborating with others and learning from different perspectives.
+                        I focus on preventive controls first: strong validation, segmented networks,
+                        least privilege, and clear reporting for faster remediation.
                       </p>
                     </div>
                   </div>
@@ -187,10 +229,10 @@ const AboutPage = () => {
                       <div className="value-icon">
                         <i className="icon-target"></i>
                       </div>
-                      <h3>Problem Solving</h3>
+                      <h3>Continuous Improvement</h3>
                       <p>
-                        I love tackling complex problems and finding creative solutions. 
-                        Every challenge is an opportunity to grow and improve.
+                        I treat every project as a learning loop: build, test, break, improve,
+                        and document so teams can move faster with confidence.
                       </p>
                     </div>
                   </div>
@@ -208,15 +250,11 @@ const AboutPage = () => {
             <div className="col-lg-12 text-center" data-aos="fade-up">
               <h2>Ready to Connect?</h2>
               <p>
-                I'm always interested in meeting new people and discussing exciting projects. 
-                Let's start a conversation!
+                Open to internships, capstone collaborations, and early-career security engineering roles.
               </p>
               <div className="cta-buttons">
                 <Link to="/projects" className="btn btn-primary btn-lg">
                   View My Projects
-                </Link>
-                <Link to="/contact" className="btn btn-outline-primary btn-lg">
-                  Get In Touch
                 </Link>
               </div>
             </div>

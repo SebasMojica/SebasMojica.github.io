@@ -331,9 +331,6 @@ const SoftwareEngineeringProjectsPage = () => {
                 <Link to="/projects" className="btn btn-primary btn-lg">
                   Back to Projects
                 </Link>
-                <Link to="/contact" className="btn btn-outline-primary btn-lg">
-                  Get In Touch
-                </Link>
               </div>
             </div>
           </div>

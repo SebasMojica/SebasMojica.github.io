@@ -2,7 +2,7 @@
 
 .landing-page {
   font-family: 'Open Sans', sans-serif;
-  background: radial-gradient(circle at top, #141f3a 0%, #0b1224 50%, #060915 100%);
+  background: radial-gradient(circle at top, #1a1520 0%, #0c0a11 52%, #05060b 100%);
   color: var(--text-secondary);
 }
 
@@ -78,6 +78,23 @@
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero-badge {
+  background: rgba(213, 143, 87, 0.16);
+  border: 1px solid rgba(213, 143, 87, 0.4);
+  color: var(--text-primary);
+  border-radius: 999px;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
 }
 
 .hero-image {
@@ -200,6 +217,42 @@
   background: var(--bg-section-alt);
 }
 
+.experience-snapshot-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, rgba(14, 11, 16, 1) 0%, rgba(9, 8, 12, 1) 100%);
+}
+
+.experience-card {
+  background: rgba(34, 27, 36, 0.88);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  padding: 1.5rem;
+  height: 100%;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(2, 6, 14, 0.5);
+}
+
+.experience-card h3 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.experience-card p {
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.experience-card span {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.92rem;
+}
+
 .project-image img {
   border-radius: 15px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
@@ -279,7 +332,7 @@
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(90, 141, 255, 0.3);
+  box-shadow: 0 10px 25px rgba(213, 143, 87, 0.3);
   color: white;
   background: var(--accent-strong);
 }
@@ -328,6 +381,10 @@
   .hero-buttons {
     flex-direction: column;
     align-items: center;
+  }
+
+  .hero-badges {
+    justify-content: center;
   }
   
   .hero-buttons .btn {
@@ -381,6 +438,7 @@
   
   .stats-section,
   .skills-preview-section,
+  .experience-snapshot-section,
   .featured-project-section,
   .cta-section {
     padding: 60px 0;

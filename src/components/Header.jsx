@@ -33,7 +33,9 @@ const Header = () => {
                 <ul className="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
                   <li><Link to="/about" className="nav-link">About</Link></li>
                   <li><Link to="/projects" className="nav-link">Projects</Link></li>
-                  <li><Link to="/contact" className="nav-link">Contact</Link></li>
+                  <li><Link to="/resume" className="nav-link">Resume</Link></li>
+                  <li><a href="https://linkedin.com/in/sebastian-mojica-73352a253" target="_blank" rel="noopener noreferrer" className="nav-link">LinkedIn</a></li>
+                  <li><a href="https://github.com/SebasMojica" target="_blank" rel="noopener noreferrer" className="nav-link">GitHub</a></li>
                 </ul>
               </nav>
             </div>

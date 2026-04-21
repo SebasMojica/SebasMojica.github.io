@@ -26,7 +26,7 @@ const AIProjectsPage = () => {
                 <h1 className="page-title">AI Projects</h1>
                 <p className="page-subtitle">
                   <DecryptedText 
-                    text="Machine learning, artificial intelligence, and data science"
+                    text="Applied computer vision and AI-enabled security workflows"
                     speed={60}
                     animateOn="view"
                     delay={500}
@@ -166,24 +166,30 @@ const AIProjectsPage = () => {
         </div>
       </section>
 
-      {/* Empty State / Placeholder Section */}
+      {/* Additional AI Projects */}
       <section className="project-section">
         <div className="container-fluid">
           <div className="row">
             <div className="col-lg-10 mx-auto">
               <div className="empty-state-content">
                 <div className="empty-state-icon">
-                  <i className="icon-cog"></i>
+                  <i className="icon-grid"></i>
                 </div>
-                <h2 className="empty-state-title">Projects Coming Soon</h2>
+                <h2 className="empty-state-title">Additional AI Work</h2>
                 <p className="empty-state-description">
-                  I'm currently working on several AI and machine learning projects. Check back soon 
-                  to see my latest work in artificial intelligence, neural networks, and data science!
+                  Beyond the CNN classifier, I also trained and fine-tuned a YOLO object detection model
+                  for custom, real-time detection tasks in independent research from 2024 to 2025.
                 </p>
                 <p className="empty-state-note">
-                  Projects will be added here as they are completed. Each project will include detailed 
-                  descriptions, methodologies, models used, and key insights.
+                  I am currently expanding this work toward AI-assisted cybersecurity pipelines, including
+                  retrieval workflows for security-finding triage and contextual reporting.
                 </p>
+                <div className="project-tech">
+                  <span className="tech-tag">YOLO</span>
+                  <span className="tech-tag">Computer Vision</span>
+                  <span className="tech-tag">Model Fine-Tuning</span>
+                  <span className="tech-tag">LLM/RAG Workflows</span>
+                </div>
                 <div className="empty-state-actions">
                   <Link to="/projects" className="btn btn-primary btn-lg">
                     Back to Projects
@@ -209,10 +215,7 @@ const AIProjectsPage = () => {
                 Let's discuss how we can work together!
               </p>
               <div className="cta-buttons">
-                <Link to="/contact" className="btn btn-primary btn-lg">
-                  Get In Touch
-                </Link>
-                <Link to="/projects" className="btn btn-outline-primary btn-lg">
+                <Link to="/projects" className="btn btn-primary btn-lg">
                   View All Projects
                 </Link>
               </div>

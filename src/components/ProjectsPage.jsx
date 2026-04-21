@@ -331,9 +331,6 @@ const ProjectsPage = () => {
                 <Link to="/about" className="btn btn-primary btn-lg">
                   Learn More About Me
                 </Link>
-                <Link to="/contact" className="btn btn-outline-primary btn-lg">
-                  Get In Touch
-                </Link>
               </div>
             </div>
           </div>

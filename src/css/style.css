@@ -1,16 +1,16 @@
 /* Base */
 :root {
-  --bg-page: #0b1224;
-  --bg-section: rgba(20, 29, 53, 0.18);
-  --bg-section-alt: rgba(26, 37, 64, 0.2);
-  --bg-navbar: rgba(13, 19, 34, 0.32);
-  --bg-card: rgba(31, 42, 72, 0.38);
-  --text-primary: #e3e9f9;
-  --text-secondary: #b6c2df;
-  --text-muted: #8d9ab8;
-  --accent: #5a8dff;
-  --accent-strong: #7aa5ff;
-  --border-soft: rgba(101, 124, 171, 0.35);
+  --bg-page: #05060b;
+  --bg-section: rgba(19, 17, 23, 0.72);
+  --bg-section-alt: rgba(27, 23, 31, 0.74);
+  --bg-navbar: rgba(9, 8, 12, 0.84);
+  --bg-card: rgba(38, 30, 39, 0.68);
+  --text-primary: #f7efe6;
+  --text-secondary: #d9c8b8;
+  --text-muted: #af9a89;
+  --accent: #d58f57;
+  --accent-strong: #ebb07f;
+  --border-soft: rgba(213, 143, 87, 0.28);
   --shadow-soft: 0 24px 40px -32px rgba(5, 11, 24, 0.8);
 }
 
@@ -23,7 +23,7 @@ body {
   color: var(--text-secondary);
   font-weight: 400;
   font-size: 1rem;
-  background: radial-gradient(circle at top, #141f3a 0%, #0b1224 50%, #060915 100%);
+  background: radial-gradient(circle at top, #1a1520 0%, #0c0a11 52%, #05060b 100%);
 }
 
 .App {
@@ -187,6 +187,24 @@ body:after {
   background: var(--accent);
   border-color: var(--accent);
   color: var(--text-primary);
+}
+
+.btn.btn-outline-primary,
+.btn-outline-primary {
+  background: transparent !important;
+  color: var(--accent) !important;
+  border-color: var(--accent) !important;
+}
+
+.btn.btn-outline-primary:hover,
+.btn-outline-primary:hover,
+.btn.btn-outline-primary:focus,
+.btn-outline-primary:focus,
+.btn.btn-outline-primary:active,
+.btn-outline-primary:active {
+  background: var(--accent) !important;
+  color: #130d09 !important;
+  border-color: var(--accent) !important;
 }
 
 .line-height-1 {

@@ -1,15 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { Suspense, lazy, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header.jsx';
 import Footer from './components/Footer.jsx';
 import Loader from './components/Loader.jsx';
-import LandingPage from './components/LandingPage.jsx';
-import AboutPage from './components/AboutPage.jsx';
-import ProjectsOverviewPage from './components/ProjectsOverviewPage.jsx';
-import SoftwareEngineeringProjectsPage from './components/SoftwareEngineeringProjectsPage.jsx';
-import CybersecurityProjectsPage from './components/CybersecurityProjectsPage.jsx';
-import AIProjectsPage from './components/AIProjectsPage.jsx';
-import ContactPage from './components/ContactPage.jsx';
+const LandingPage = lazy(() => import('./components/LandingPage.jsx'));
+const AboutPage = lazy(() => import('./components/AboutPage.jsx'));
+const ProjectsOverviewPage = lazy(() => import('./components/ProjectsOverviewPage.jsx'));
+const SoftwareEngineeringProjectsPage = lazy(() => import('./components/SoftwareEngineeringProjectsPage.jsx'));
+const CybersecurityProjectsPage = lazy(() => import('./components/CybersecurityProjectsPage.jsx'));
+const AIProjectsPage = lazy(() => import('./components/AIProjectsPage.jsx'));
+const ResumePage = lazy(() => import('./components/ResumePage.jsx'));
 
 function App() {
   useEffect(() => {
@@ -28,10 +28,13 @@ function App() {
       ];
 
       cssFiles.forEach(href => {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = href;
-        document.head.appendChild(link);
+        const existingLink = document.querySelector(`link[href="${href}"]`);
+        if (!existingLink) {
+          const link = document.createElement('link');
+          link.rel = 'stylesheet';
+          link.href = href;
+          document.head.appendChild(link);
+        }
       });
     };
 
@@ -161,37 +164,40 @@ function App() {
     const loadScripts = () => {
       const scripts = [
         'js/jquery-3.3.1.min.js',
-        'js/jquery-ui.js',
         'js/popper.min.js',
         'js/bootstrap.min.js',
-        'js/owl.carousel.min.js',
-        'js/jquery.countdown.min.js',
         'js/jquery.easing.1.3.js',
         'js/aos.js',
-        'js/jquery.fancybox.min.js',
         'js/jquery.sticky.js',
-        'js/isotope.pkgd.min.js',
         'js/main.js'
       ];
 
       let loadedCount = 0;
       scripts.forEach((src, index) => {
-        const script = document.createElement('script');
-        script.src = src;
-        script.onload = () => {
+        const existingScript = document.querySelector(`script[src="${src}"]`);
+        if (existingScript) {
           loadedCount++;
           if (loadedCount === scripts.length) {
             initializeJQuery();
           }
-        };
-        script.onerror = () => {
-          console.warn(`Failed to load script: ${src}`);
-          loadedCount++;
-          if (loadedCount === scripts.length) {
-            initializeJQuery();
-          }
-        };
-        document.head.appendChild(script);
+        } else {
+          const script = document.createElement('script');
+          script.src = src;
+          script.onload = () => {
+            loadedCount++;
+            if (loadedCount === scripts.length) {
+              initializeJQuery();
+            }
+          };
+          script.onerror = () => {
+            console.warn(`Failed to load script: ${src}`);
+            loadedCount++;
+            if (loadedCount === scripts.length) {
+              initializeJQuery();
+            }
+          };
+          document.head.appendChild(script);
+        }
       });
     };
 
@@ -205,15 +211,17 @@ function App() {
       <Loader />
       <div className="site-wrap">
         <Header />
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/projects" element={<ProjectsOverviewPage />} />
-            <Route path="/projects/software-engineering" element={<SoftwareEngineeringProjectsPage />} />
-            <Route path="/projects/cybersecurity" element={<CybersecurityProjectsPage />} />
-            <Route path="/projects/ai" element={<AIProjectsPage />} />
-            <Route path="/contact" element={<ContactPage />} />
-          </Routes>
+          <Suspense fallback={<Loader />}>
+            <Routes>
+              <Route path="/" element={<LandingPage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/projects" element={<ProjectsOverviewPage />} />
+              <Route path="/projects/software-engineering" element={<SoftwareEngineeringProjectsPage />} />
+              <Route path="/projects/cybersecurity" element={<CybersecurityProjectsPage />} />
+              <Route path="/projects/ai" element={<AIProjectsPage />} />
+              <Route path="/resume" element={<ResumePage />} />
+            </Routes>
+          </Suspense>
         <Footer />
       </div>
     </div>

@@ -26,7 +26,7 @@ const ProjectsOverviewPage = () => {
                 <h1 className="page-title">My Projects</h1>
                 <p className="page-subtitle">
                   <DecryptedText 
-                    text="Explore my work across different disciplines"
+                    text="Security, software, and AI projects with real implementation depth"
                     speed={60}
                     animateOn="view"
                     delay={500}
@@ -54,8 +54,8 @@ const ProjectsOverviewPage = () => {
                         </div>
                         <h3 className="category-title">Cybersecurity</h3>
                         <p className="category-description">
-                          Penetration testing, network security, vulnerability assessment, 
-                          and security analysis projects.
+                          Penetration testing, home-lab infrastructure, network defense,
+                          and cryptography / PKI implementation projects.
                         </p>
                         <div className="category-link">
                           View Projects <i className="icon-arrow-right"></i>
@@ -73,8 +73,8 @@ const ProjectsOverviewPage = () => {
                         </div>
                         <h3 className="category-title">Software Engineering</h3>
                         <p className="category-description">
-                          Object-oriented design, system architecture, design patterns, 
-                          and software development projects.
+                          Object-oriented architecture, testing strategy, modular design,
+                          and collaborative engineering workflows.
                         </p>
                         <div className="category-link">
                           View Projects <i className="icon-arrow-right"></i>
@@ -92,8 +92,8 @@ const ProjectsOverviewPage = () => {
                         </div>
                         <h3 className="category-title">AI Projects</h3>
                         <p className="category-description">
-                          Machine learning, artificial intelligence, and data science 
-                          projects and experiments.
+                          Computer vision model training, YOLO fine-tuning, and AI-enabled
+                          security analysis workflows.
                         </p>
                         <div className="category-link">
                           View Projects <i className="icon-arrow-right"></i>
@@ -115,15 +115,12 @@ const ProjectsOverviewPage = () => {
             <div className="col-lg-12 text-center" data-aos="fade-up">
               <h2>Interested in Working Together?</h2>
               <p>
-                I'm always excited to take on new challenges and collaborate on interesting projects. 
-                Let's discuss how we can work together!
+                If you're hiring for security engineering, SOC-adjacent analyst, or AI security work,
+                I'd love to connect.
               </p>
               <div className="cta-buttons">
                 <Link to="/about" className="btn btn-primary btn-lg">
                   Learn More About Me
-                </Link>
-                <Link to="/contact" className="btn btn-outline-primary btn-lg">
-                  Get In Touch
                 </Link>
               </div>
             </div>
